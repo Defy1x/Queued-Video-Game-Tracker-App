@@ -1,6 +1,3 @@
-# Queued-Video-Game-Tracker-App
-Second Capstone Project for Columbia Engineering Class that keeps progress of a user's video game library.
-
 # Table of Contents:
 * [Project Description](#Project)
 * [Deployed Links](#Links)
@@ -10,7 +7,7 @@ Second Capstone Project for Columbia Engineering Class that keeps progress of a 
 
 # Project:
 ## Title:
-# c14-Tech-Blog
+# Queued-Video-Game-Tracker-App
 
 ## Description:
 Queued is a video game application that keep tracks of your video game library. It includes a list of games you have not started, in progress, and beaten.
