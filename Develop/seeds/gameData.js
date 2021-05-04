@@ -4,9 +4,9 @@ const { Game } = require("../models");
 const gameData = [
     {
         userId: 1,
-        id:1,
         gameName: "Doom Eternal",
         gameSummary: "Dive into the midst of hell and slaughter demons as the Doom Slayer.",
+        gameArtwork: "tiny",
         gamePlatform: "PS5",
         gameGenre: "Shooter",
         gameESRB: "Mature",
@@ -21,10 +21,10 @@ const gameData = [
     },
     {
         userId: 2,
-        id:2,
         gameName: "Returnal",
         gameSummary: "Returnal is a third-person shooter roguelike video game developed by Housemarque and published by Sony Interactive Entertainment.",
         gamePlatform: "PS5",
+        gameArtwork: "tiny",
         gameGenre: "Roguelike",
         gameESRB: "Teen",
         gameReleased: 03/20/2020,
