@@ -14,11 +14,32 @@ router.get("/", async (req, res) => {
                 },
             ]
         });
-        const gamesData = rawGamesData.map((post) => game.get({ plain: true }));
+        const gamesData = rawGamesData.map((game) => game.get({ plain: true }));
         res.status(200).json(gamesData);
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+router.get("/:id", async (req, res) => {
+  try {
+    const gamesData = await Game.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          as: "game_creator",
+          attributes: ["username"]
+      }
+      ],
+    });
+    if (!gamesData) {
+      res.status(404).json({ message: "No games found with this id!" });
+      return;
+    }
+    res.status(200).json(gamesData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.post("/", async (req, res) => {

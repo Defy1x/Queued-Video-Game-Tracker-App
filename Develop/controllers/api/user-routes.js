@@ -1,4 +1,4 @@
-const { User } = require("../../models");
+const { User, Game } = require("../../models");
 const router = require("express").Router();
 const checkAuthorization = require("../../utils/authorization");
 
@@ -10,6 +10,19 @@ router.get("/", async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+router.get("/:id", async (req, res) => {
+  try {
+    const rawUserData = await User.findByPk(req.params.id);
+    if (!rawUserData) {
+      res.status(404).json({ message: "No user found with this id!" });
+      return;
+    }
+    res.status(200).json(rawUserData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // This makes a new instance of the user model
