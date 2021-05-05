@@ -37,9 +37,6 @@ User.init(
                 len: [8]
             }
         },
-        twitchId: {
-          type: DataTypes.STRING
-        }
     },
     {
         hooks: {
