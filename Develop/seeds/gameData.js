@@ -17,7 +17,6 @@ const gameData = [
         gamePlaying: true,
         gameStatus: "In Progress",
         gameProgress: 50,
-
     },
     {
         userId: 2,

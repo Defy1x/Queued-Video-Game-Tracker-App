@@ -24,8 +24,8 @@ Game.init(
             allowNull: false,
         },
         gameArtwork: {
-            type: DataTypes.BLOB,
-            allowNull: false,
+            type: DataTypes.TEXT,
+            allowNull: true,
           },
           gameSummary: {
               type: DataTypes.TEXT,

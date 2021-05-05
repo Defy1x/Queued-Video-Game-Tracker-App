@@ -1,7 +1,20 @@
 const { User, Game } = require("../../models");
 const router = require("express").Router();
+const { searchGames } = require('../../services/rawg');
 
 // Dashboard needs to view all posts from the logged in user
+
+router.get("/search", async (req, res) => { // /api/games/serach?title=Skyrim
+  const { searchVal } = req.query
+  const games = await searchGames( searchVal );
+  const serializedGames = games.map( ({ name, platforms, released, backgound_image }) => ({
+    name,
+    platforms: platforms.map( ({name}) => name ),
+    released,
+    background_image
+  }))
+  return serializedGames;
+});
 
 router.get("/", async (req, res) => {
     try {
@@ -44,9 +57,21 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
     try {
-        const gamePost = await Game.create({
-            userId: req.body.userId,
-            blogContent: req.body.blogContent
+        const newGame = await Game.create({
+          userId: req.session.user_id,
+          gameName: req.body.gameName,
+          gameSummary: req.body.gameSummary,
+          gameArtwork: req.body.gameArtwork,
+          gamePlatform: req.body.gamePlatform,
+          gameGenre: req.body.gameGenre,
+          gameESRB: req.body.gameESRB,
+          gameReleased: req.body.gameReleased,
+          gameRating: req.body.gameRating,
+          gamePublisher: req.body.gamePublisher,
+          gameDeveloper: req.body.gameDeveloper,
+          gamePlaying: req.body.gamePlaying,
+          gameStatus: req.body.gameStatus,
+          gameProgress: req.body.gameProgress,
         });
         res.status(200).json(newGame);
     } catch (err) {
@@ -75,7 +100,7 @@ router.put("/:id", async (req, res) => {
 // Will need to feed in the specific id for that post
 router.delete("/:id", async (req, res) => {
     try {
-        const deletedPost = await Game.destroy({
+        const deletedGame = await Game.destroy({
             where: { id: req.params.id }
         });
         res.status(200).json(deletedGame);
