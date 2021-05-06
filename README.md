@@ -30,7 +30,7 @@ Instead of using the front end you developed for your first project, you should 
 ```
 
 ## Config
-Please add your user name and password to the config file. Also install npm packages needed to run this program.
+Please add your user name and password to the config file. You will need an API key from rawg.io in the service layer to perform searches.Also install npm packages needed to run this program.
 
 ## Deployed Heroku Link
 Heroku Link coming shortly.
