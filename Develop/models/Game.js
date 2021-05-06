@@ -27,10 +27,6 @@ Game.init(
             type: DataTypes.TEXT,
             allowNull: true,
           },
-          gameSummary: {
-              type: DataTypes.TEXT,
-              allowNull: false,
-            },
         gamePlatform: {
             type: DataTypes.TEXT,
             allowNull: false,
@@ -39,6 +35,10 @@ Game.init(
               type: DataTypes.TEXT,
               allowNull: false,
           },
+          gameTag: {
+              type: DataTypes.TEXT,
+              allowNull: false,
+            },
           gameESRB: {
               type: DataTypes.TEXT,
               allowNull: false,
@@ -67,10 +67,6 @@ Game.init(
             type: DataTypes.TEXT,
             allowNull: false,
           },
-          gameProgress:{
-            type: DataTypes.INTEGER,
-            allowNull: true,
-          }
     },
     {
         sequelize,

@@ -12,9 +12,7 @@
 ## Description:
 Queued is a video game application that keep tracks of your video game library. It includes a list of games you have not started, in progress, and beaten.
 
-This is my most ambitious project to date! I am using the following technologies: Sequelize ORM, Node, Express, HTML/CSS, JS, and IGDB 3rd party api for getting video game data.
-
-I will post my challenges and hardships once this project is complete.
+This is my most ambitious project to date! I worked by myself on this project. I am using the following technologies: Sequelize ORM, Node, Express, HTML/CSS, JS, and IGDB 3rd party api for getting video game data.
 
 ## User Story
 
@@ -38,14 +36,11 @@ Please add your user name and password to the config file. Also install npm pack
 Heroku Link coming shortly.
 
 
-## Deployed Video Link
-I will show a video showing the functionality of the app.
-
 #Usage
 ## Final screenshot
-![This is the final deployed screenshot of the node project](requirements/screenshot-01.png)
-![This is the final deployed screenshot of the node project](requirements/screenshot-02.png)
-![This is the final deployed screenshot of the node project](requirements/screenshot-03.png)
+![This is the final deployed screenshot of the node project](Assets/Search.jpg)
+![This is the final deployed screenshot of the node project](Assets/Completed.jpg)
+![This is the final deployed screenshot of the node project](Assets/Game-Details-2.jpg)
 
 #Credits
 Thank you to everyone in the Columbia Engineering Bootcamp.

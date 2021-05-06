@@ -4,17 +4,17 @@ const { searchGames } = require('../../services/rawg');
 
 // Dashboard needs to view all posts from the logged in user
 
-router.get("/search", async (req, res) => { // /api/games/serach?title=Skyrim
-  const { searchVal } = req.query
-  const games = await searchGames( searchVal );
-  const serializedGames = games.map( ({ name, platforms, released, backgound_image }) => ({
-    name,
-    platforms: platforms.map( ({name}) => name ),
-    released,
-    background_image
-  }))
-  return serializedGames;
-});
+// router.get("/search", async (req, res) => { // /api/games/serach?title=Skyrim
+//   const { searchVal } = req.query
+//   const games = await searchGames( searchVal );
+//   const serializedGames = games.map( ({ name, platforms, released, backgound_image }) => ({
+//     name,
+//     platforms: platforms.map( ({name}) => name ),
+//     released,
+//     background_image
+//   }))
+//   return serializedGames;
+// });
 
 router.get("/", async (req, res) => {
     try {
@@ -60,10 +60,10 @@ router.post("/", async (req, res) => {
         const newGame = await Game.create({
           userId: req.session.user_id,
           gameName: req.body.gameName,
-          gameSummary: req.body.gameSummary,
           gameArtwork: req.body.gameArtwork,
           gamePlatform: req.body.gamePlatform,
           gameGenre: req.body.gameGenre,
+          gameTag: req.body.gameTag,
           gameESRB: req.body.gameESRB,
           gameReleased: req.body.gameReleased,
           gameRating: req.body.gameRating,

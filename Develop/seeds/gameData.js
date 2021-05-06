@@ -5,10 +5,10 @@ const gameData = [
     {
         userId: 1,
         gameName: "Doom Eternal",
-        gameSummary: "Dive into the midst of hell and slaughter demons as the Doom Slayer.",
         gameArtwork: "tiny",
         gamePlatform: "PS5",
         gameGenre: "Shooter",
+        gameTag: "Single Player",
         gameESRB: "Mature",
         gameReleased: 03/20/2020,
         gameRating: 88,
@@ -16,15 +16,14 @@ const gameData = [
         gameDeveloper: "ID Software",
         gamePlaying: true,
         gameStatus: "In Progress",
-        gameProgress: 50,
     },
     {
         userId: 2,
         gameName: "Returnal",
-        gameSummary: "Returnal is a third-person shooter roguelike video game developed by Housemarque and published by Sony Interactive Entertainment.",
-        gamePlatform: "PS5",
         gameArtwork: "tiny",
+        gamePlatform: "PS5",
         gameGenre: "Roguelike",
+        gameTag: "Single Player",
         gameESRB: "Teen",
         gameReleased: 03/20/2020,
         gameRating: 86,
@@ -32,7 +31,6 @@ const gameData = [
         gameDeveloper: "Housemarque",
         gamePlaying: true,
         gameStatus: "In Progress",
-        gameProgress: 10,
     }
 ]
 
