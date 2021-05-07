@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Game } = require("../models");
+const checkAuthorization = require("../utils/authorization");
 
 // We grab only the username and comment content from this?
 router.get("/", async (req, res) => {
