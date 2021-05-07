@@ -20,7 +20,7 @@ Game.init(
             }
         },
         gameName: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         gameArtwork: {
@@ -40,7 +40,7 @@ Game.init(
               allowNull: false,
             },
           gameESRB: {
-              type: DataTypes.TEXT,
+              type: DataTypes.STRING,
               allowNull: false,
           },
         gameReleased: {
