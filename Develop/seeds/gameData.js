@@ -14,8 +14,7 @@ const gameData = [
         gameRating: 88,
         gamePublisher: "Bethesda",
         gameDeveloper: "ID Software",
-        gamePlaying: true,
-        gameStatus: "In Progress",
+        gameStatus: 3,
     },
     {
         userId: 2,
@@ -29,8 +28,7 @@ const gameData = [
         gameRating: 86,
         gamePublisher: "Sony Interactive Entertainment",
         gameDeveloper: "Housemarque",
-        gamePlaying: true,
-        gameStatus: "In Progress",
+        gameStatus: 1,
     }
 ]
 

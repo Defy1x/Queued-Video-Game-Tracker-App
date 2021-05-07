@@ -59,15 +59,11 @@ Game.init(
             type: DataTypes.TEXT,
             allowNull: false,
           },
-          gamePlaying:{
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-          },
           gameStatus:{
-            type: DataTypes.TEXT,
-            allowNull: false,
-          },
-    },
+            type: DataTypes.INTEGER,
+            allowNull: true,
+          }
+      },
     {
         sequelize,
         timestamps: true,

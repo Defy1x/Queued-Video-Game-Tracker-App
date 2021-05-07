@@ -1,6 +1,6 @@
 const { User, Game } = require("../../models");
 const router = require("express").Router();
-const { searchGames } = require('../../services/rawg');
+// const { searchGames } = require('../../services/rawg');
 
 // Dashboard needs to view all posts from the logged in user
 
@@ -69,9 +69,7 @@ router.post("/", async (req, res) => {
           gameRating: req.body.gameRating,
           gamePublisher: req.body.gamePublisher,
           gameDeveloper: req.body.gameDeveloper,
-          gamePlaying: req.body.gamePlaying,
           gameStatus: req.body.gameStatus,
-          gameProgress: req.body.gameProgress,
         });
         res.status(200).json(newGame);
     } catch (err) {
