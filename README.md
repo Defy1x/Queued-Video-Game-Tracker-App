@@ -42,7 +42,7 @@ https://github.com/Defy1x/Queued-Video-Game-Tracker-App
 https://xd.adobe.com/view/868e8de5-d067-45c2-ad5c-f90e2e774de2-d3dd/?fullscreen
 
 ## Link to Presentation and Case Study
-https://uxfol.io/projects/60946a124a85c80003c0ede6
+https://uxfol.io/project/03c0ede6/Queu-ed--Video-Game-Tracker
 
 #Usage
 ## Final screenshot
