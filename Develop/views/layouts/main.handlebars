@@ -41,7 +41,7 @@
           {{/if}}
           {{#if logged_in}}
           <div class="form-container">
-            <form id="game-form" name="game-form" onsubmit="return search()">
+            <form id="game-form" name="game-form">
               <input type="text" id="game-name" placeholder="Search for a Game">
               <input type="submit" name="search-btn" id="search-btn" value="">
             </form>
@@ -55,13 +55,13 @@
 <!-- Begin page content -->
   {{{body}}}
 
-    <script src="./js/script.js"></script>
-    <script src="./js/logout.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/42a66a0b61.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/logout.js"></script>
   </body>
 </html>

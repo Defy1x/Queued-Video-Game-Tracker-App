@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, Game } = require("../models");
 const checkAuthorization = require("../utils/authorization");
+const useRawgApi = require('../services/rawg');
 
 // We grab only the username and comment content from this?
 router.get("/", async (req, res) => {
@@ -51,6 +52,27 @@ router.get("/signout", async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+})
+
+router.get('/search-results', async (req, res) => {
+  const { search } = req.query
+
+  try {
+    const { data: { results } } = await useRawgApi({
+      params: { search },
+      path: '/games'
+    });
+
+    console.log( results );
+
+    res.render('search-results', {
+      games: results,
+      logged_in: req.session.logged_in, // logged in status from the session object
+      userId: req.session.user_id // user id from the session object
+    } );
+  } catch (err) {
+    res.status(500).json(err);
+  }
 })
 
 module.exports = router;

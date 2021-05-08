@@ -3,23 +3,25 @@ const useRawgApi = require('../../services/rawg');
 
 router.all('*', async (req, res) => {
   const {
-    body: data
+    body: data,
     method,
     query: params,
     headers,
-    route
+    path
   } = req
   try {
     const response = await useRawgApi({
       data,
       method,
       params,
-      route,
-      headers
+      path
     });
+
 
     res.json(response.data);
   } catch (err) {
     res.status(500).json(err);
   }
-})
+});
+
+module.exports = router;

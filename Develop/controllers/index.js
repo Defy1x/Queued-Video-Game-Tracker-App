@@ -6,7 +6,7 @@ const homeRoutes = require("./home-routes");
 const gameRoutes = require("./game-routes");
 
 router.use("/", homeRoutes);
-router.use("/game", gameRoutes);
+router.use("/game",checkAuthorization, gameRoutes);
 router.use("/api", apiRoutes);
 
 module.exports = router;

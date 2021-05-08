@@ -3,7 +3,7 @@ const { User, Game } = require("../models");
 const checkAuthorization = require("../utils/authorization");
 
 //searches and returns all games with a status of completed
-router.get("/progress/:id", async (req, res) => {
+router.get("/progress/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
@@ -26,7 +26,7 @@ router.get("/progress/:id", async (req, res) => {
 });
 
 //searches and returns all games with a status of completed
-router.get("/completed/:id", async (req, res) => {
+router.get("/completed/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
@@ -49,7 +49,7 @@ router.get("/completed/:id", async (req, res) => {
 });
 
 //searches and returns all games with the status of not started
-router.get("/notstarted/:id", async (req, res) => {
+router.get("/notstarted/:id",checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
