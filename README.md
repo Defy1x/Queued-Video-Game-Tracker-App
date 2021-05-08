@@ -38,8 +38,11 @@ Heroku Link coming shortly.
 ## Link to Github
 https://github.com/Defy1x/Queued-Video-Game-Tracker-App
 
-## Link to Adobe High Fidelity Wireframes
+## Link to Adobe High Fidelity Wireframes (Desktop)
 https://xd.adobe.com/view/868e8de5-d067-45c2-ad5c-f90e2e774de2-d3dd/?fullscreen
+
+## Link to Adobe High Fidelity Wireframes (Mobile)
+https://xd.adobe.com/view/cb3ae42c-f7d3-4b0c-8728-a0fd25f984f9-9e69/?fullscreen
 
 ## Link to Presentation and Case Study
 https://uxfol.io/project/03c0ede6/Queu-ed--Video-Game-Tracker
