@@ -11,7 +11,7 @@ router.get("/progress/:id", async (req, res) => {
             userId: req.session.user_id
           },
             include:
-                { model: Game, as: "game_creator" }
+                { model: User, as: "game_creator" }
         });
         const usersGames = userSpecificGames.get({ plain:true });
         console.log(usersGames)
@@ -34,7 +34,7 @@ router.get("/completed/:id", async (req, res) => {
             userId: req.session.user_id
           },
             include:
-                { model: Game, as: "game_creator" }
+                { model: User, as: "game_creator" }
         });
         const usersGames = userSpecificGames.get({ plain:true });
         console.log(usersGames)
@@ -57,7 +57,7 @@ router.get("/notstarted/:id", async (req, res) => {
             userId: req.session.user_id
           },
             include:
-                { model: Game, as: "game_creator" }
+                { model: User, as: "game_creator" }
         });
         const usersGames = userSpecificGames.get({ plain:true });
         console.log(usersGames)
@@ -75,7 +75,7 @@ router.get("/details/:id", async (req, res) => {
     try {
         const userSpecificGames = await Game.findByPk(req.params.id, {
             include:
-                { model: Game, as: "game_creator" }
+                { model: User, as: "game_creator" }
         });
         const usersGames = userSpecificGames.get({ plain:true });
         console.log(usersGames)
