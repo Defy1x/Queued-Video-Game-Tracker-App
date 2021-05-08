@@ -75,4 +75,24 @@ router.get('/search-results', async (req, res) => {
   }
 })
 
+router.get('/games/:id', async (req, res) => {
+  const { id } = req.params
+
+  try {
+    const results = await useRawgApi({
+      path: `/games/${id}`
+    });
+
+    console.log( results );
+
+    res.render('search-details', {
+      game: results.data,
+      logged_in: req.session.logged_in, // logged in status from the session object
+      userId: req.session.user_id // user id from the session object
+    } );
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 module.exports = router;
