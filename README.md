@@ -49,7 +49,7 @@ https://uxfol.io/project/03c0ede6/Queu-ed--Video-Game-Tracker
 
 #Usage
 ## Final screenshot
-![This is the final deployed screenshot of the node project](Assets/queued_cover.jpg)
+![This is the final deployed screenshot of the node project](Assets/queued_cover2.jpg)
 ![This is the final deployed screenshot of the node project](Assets/Search.jpg)
 ![This is the final deployed screenshot of the node project](Assets/Completed.jpg)
 ![This is the final deployed screenshot of the node project](Assets/Game-Details-2.jpg)
