@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
         const games = gamesData.map((games) => games.get({ plain: true }));
         console.log(games);
         res.render("homepage", {
-            posts,
+            games,
             logged_in: req.session.logged_in, // logged in status from the session object
             userId: req.session.user_id // user id from the session object
         });

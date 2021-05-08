@@ -6,14 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.82.0">
-    <title>Dev Tech Blog</title>
-
-
+    <title>Queued</title>
     <!-- Bootstrap core CSS -->
-<link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
 
@@ -21,7 +18,7 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand">Dev Tech Blog</a>
+      <a class="navbar-brand">Queued</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,11 +27,6 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          {{#if logged_in}}
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
-          </li>
-          {{/if}}
           {{#unless logged_in}}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/signin">Sign in</a>
@@ -45,6 +37,13 @@
             <a class="nav-link active" id="logout" aria-current="page" href="/signout">Sign Out</a>
           </li>
           {{/if}}
+          {{#if logged_in}}
+          <div class="form-container">
+            <form id="game-form" name="game-form" onsubmit="return search()">
+              <input type="text" id="game-name" placeholder="Search for a Game">
+              <input type="submit" name="search-btn" id="search-btn" value="">
+            </form>
+          {{/if}}
         </ul>
       </div>
     </div>
@@ -53,6 +52,8 @@
 
 <!-- Begin page content -->
   {{{body}}}
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/logout.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
   </body>
