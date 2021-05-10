@@ -12,7 +12,7 @@
 ## Description:
 Queued is a video game application that keep tracks of your video game library. It includes a list of games you have not started, in progress, and beaten.
 
-This is my most ambitious project to date! I worked by myself on this project. I did all the UX/ UI Design. I am using the following technologies: Sequelize ORM, Node, Express, HTML/CSS, JS, and RAWG API 3rd party api for getting video game data.
+This is my most ambitious project to date! I worked by myself on this project. I did all the UX/ UI Design. I am using the following technologies: Sequelize ORM, Node, Express, HTML/CSS, JS, and RAWG 3rd party API for getting video game data.
 
 ## User Story
 
