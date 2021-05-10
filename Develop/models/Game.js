@@ -23,7 +23,7 @@ Game.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        gameSummar:{
+        gameSummary:{
           type: DataTypes.TEXT,
           allowNull: false,
         },

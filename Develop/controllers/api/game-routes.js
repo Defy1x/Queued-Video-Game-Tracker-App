@@ -82,9 +82,7 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
     try {
         const updatedGame = await Game.update({
-            gamePlaying: req.body.gamePlaying,
             gameStatus: req.body.gameStatus,
-            gameProgress: req.body.gameProgress
         },
         {
             where: { id: req.params.id }
