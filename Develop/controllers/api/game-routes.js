@@ -2,8 +2,6 @@ const { User, Game } = require("../../models");
 const router = require("express").Router();
 // const { searchGames } = require('../../services/rawg');
 
-// Dashboard needs to view all posts from the logged in user
-
 // router.get("/search", async (req, res) => { // /api/games/serach?title=Skyrim
 //   const { searchVal } = req.query
 //   const games = await searchGames( searchVal );

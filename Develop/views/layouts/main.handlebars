@@ -24,37 +24,39 @@
       <div class="form-container" style="text-align: left;">
         <form id="game-form" name="game-form">
           <input type="text" id="game-name" placeholder="Search for a Game" style="border-radius: 5px; border: 0px; padding: 5px; width: 200px;">
-          <input type="submit" name="search-btn" id="search-btn" style="border-radius: 5px; border: 0px; height: 26px; padding: 5px;">
+          <input type="submit" name="search-btn" id="search-btn">
         </form>
       </div>
       {{/if}}
       <hr>
       <ul class="nav nav-pills flex-column mb-auto">
         <h3 style="text-align: left;">My Collection</h3>
+        {{#if logged_in}}
         <li class="nav-item" style="text-align: left;">
-          <a href="/progress" class="nav-link text-white" aria-current="page">
-            In Progress
+          <a href="/library/progress/:id" class="nav-link text-white" aria-current="page">
+            <img style ="margin-right: 15px;" src="./img/bolt.png" width="10px;"></img>In Progress
           </a>
         </li>
         <li style="text-align: left;">
-          <a href="#" class="nav-link text-white">
-            Completed
+          <a href="/library/completed/:id" class="nav-link text-white">
+            <img style ="margin-right: 10px;" src="./img/trophy.png" width="15px;">Completed
           </a>
         </li>
         <li style="text-align: left;">
-          <a href="#" class="nav-link text-white">
-            Not Started
+          <a href="/library/notstarted/:id" class="nav-link text-white">
+            <img style ="margin-right: 6px;" src="./img/diamond.png" width="15px;"> Not Started
           </a>
         </li>
+      {{/if}}
       <hr>
       </ul>
       {{#if logged_in}}
-      <h3 style="text-align: left;">My Settings</h3>
+      <h3 style="text-align: left;">My Profile</h3>
       <hr>
       <div class="dropdown">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="./img/doomslayer.png" alt="" width="32" height="32" class="rounded-circle me-2" style="border: 3px solid #D4FF00;">
-          <strong>{{user.username}}Username</strong>
+          <strong>{{userId}}</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
           <li><a class="dropdown-item" href="#">Enable Light Mode</a></li>
@@ -65,40 +67,6 @@
       {{/if}}
     </div>
   </sidebar>
-
-
-<!-- <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #0A1E29 !important; border-bottom-style:#225B7B;">
-    <div class="container-fluid">
-      <a class="navbar-brand">Queued</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          {{#unless logged_in}}
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/signin">Sign in</a>
-          </li>
-          {{/unless}}
-          {{#if logged_in}}
-          <li class="nav-item">
-            <a class="nav-link active" id="logout" aria-current="page" href="/signout">Sign Out</a>
-          </li>
-          {{/if}}
-          {{#if logged_in}}
-          <div class="form-container">
-            <form id="game-form" name="game-form">
-              <input type="text" id="game-name" placeholder="Search for a Game" style="border-radius: 5px; border: 0px; padding: 5px; width: 300px;">
-              <input type="submit" name="search-btn" id="search-btn" style="border-radius: 5px; border: 0px; height: 26px; padding: 5px;">
-            </form>
-          {{/if}}
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header> -->
-  <!-- <body class="d-flex flex-column h-100"> -->
 
 <body>
 <!-- Begin page content -->
