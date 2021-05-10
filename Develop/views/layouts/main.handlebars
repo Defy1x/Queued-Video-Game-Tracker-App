@@ -33,22 +33,21 @@
             <img src="./img/doomslayer.png" alt="user" width="70px" height="70px" class="rounded-circle me-2" style="border: 3px solid #D4FF00;"></img>
             <strong style="padding-top: 10px; padding-bottom: 20px;">@username</strong>
           </div>
-          <hr>
         {{/if}}
         <h3 style="text-align: left;">My Collection</h3>
         {{#if logged_in}}
         <li class="nav-item" style="text-align: left;">
-          <a href="/library/progress/:id" class="nav-link text-white" aria-current="page">
+          <a href="/library/progress/1" class="nav-link text-white" aria-current="page">
             <img style ="margin-right: 15px;" src="./img/bolt.png" width="10px;"></img>In Progress
           </a>
         </li>
         <li style="text-align: left;">
-          <a href="/library/completed/:id" class="nav-link text-white">
+          <a href="/library/completed/2" class="nav-link text-white">
             <img style ="margin-right: 10px;" src="./img/trophy.png" width="15px;">Completed
           </a>
         </li>
         <li style="text-align: left;">
-          <a href="/library/notstarted/:id" class="nav-link text-white">
+          <a href="/library/notstarted/3" class="nav-link text-white">
             <img style ="margin-right: 6px;" src="./img/diamond.png" width="15px;"> Not Started
           </a>
         </li>
