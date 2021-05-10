@@ -5,6 +5,7 @@ const gameData = [
     {
         userId: 1,
         gameName: "Doom Eternal",
+        gameSummary: "Description of Doom goes here!!",
         gameArtwork: "tiny",
         gamePlatform: "PS5",
         gameGenre: "Shooter",
@@ -19,6 +20,7 @@ const gameData = [
     {
         userId: 2,
         gameName: "Returnal",
+        gameSummary: "Description of Returnal goes here!!",
         gameArtwork: "tiny",
         gamePlatform: "PS5",
         gameGenre: "Roguelike",

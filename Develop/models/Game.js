@@ -23,6 +23,10 @@ Game.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        gameSummar:{
+          type: DataTypes.TEXT,
+          allowNull: false,
+        },
         gameArtwork: {
             type: DataTypes.TEXT,
             allowNull: true,

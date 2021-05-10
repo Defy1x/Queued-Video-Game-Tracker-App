@@ -60,6 +60,7 @@ router.post("/", async (req, res) => {
         const newGame = await Game.create({
           userId: req.session.user_id,
           gameName: req.body.gameName,
+          gameSummary: req.body.gameSummary,
           gameArtwork: req.body.gameArtwork,
           gamePlatform: req.body.gamePlatform,
           gameGenre: req.body.gameGenre,
