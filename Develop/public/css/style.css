@@ -13,6 +13,7 @@ h3{
 
 sidebar{
   padding-top: 20px;
+  color: #0A161D;
 }
 
 hr{
@@ -30,6 +31,21 @@ hr{
   align-items: center;
 }
 
+
+.search-display{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search-display a{
+  text-decoration: none;
+}
+
+.search-display p{
+  font-size: 20px;
+  color: white;
+}
 
 #search-btn{
 	height:40px;

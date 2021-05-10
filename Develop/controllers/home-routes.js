@@ -85,7 +85,7 @@ router.get('/games/:id', checkAuthorization, async (req, res) => {
 
     console.log( results );
 
-    res.render('game-details', {
+    res.render('search-details', {
       game: results.data,
       logged_in: req.session.logged_in, // logged in status from the session object
       userId: req.session.user_id // user id from the session object

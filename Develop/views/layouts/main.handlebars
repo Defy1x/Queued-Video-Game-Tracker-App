@@ -13,11 +13,10 @@
     <!-- Custom styles for this template -->
   </head>
   <sidebar>
-    <div class="d-flex flex-column p-3 text-white" style="height:100vh; background-color:#0A161D;">
-      <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto text-white text-decoration-none">
-        <span class="fs-4"><img src="./img/logo.png" alt="Queued logo" width="120px;" style="padding-left: 30px;"></img>
+    <div class="d-flex flex-column p-3 text-white" style="height:100vh; background-color:#0A161D; border-radius: 10px; padding-top: 10px;">
+      <a href="/" class="d-flex align-items-center p-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <span class="fs-4"><img src="./img/logo.png" alt="Queued logo" width="120px;" style="padding-left: 10px; padding-bottom: 20px;"></img>
       </a>
-      <hr>
       <h3 style="padding-bottom:10px; margin: none; text-align: left;">Explore</h3>
       {{#if logged_in}}
       <div class="form-container" style="text-align: left;">
@@ -34,6 +33,7 @@
             <img src="./img/doomslayer.png" alt="user" width="70px" height="70px" class="rounded-circle me-2" style="border: 3px solid #D4FF00;"></img>
             <strong style="padding-top: 10px; padding-bottom: 20px;">@username</strong>
           </div>
+          <hr>
         {{/if}}
         <h3 style="text-align: left;">My Collection</h3>
         {{#if logged_in}}
@@ -58,7 +58,7 @@
       {{#if logged_in}}
       <h3 style="text-align: left;">Logout</h3>
       <hr>
-      <div class="dropdown">
+      <div class="dropdown" style="padding-bottom: 20px;">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="./img/doomslayer.png" alt="" width="32" height="32" class="rounded-circle me-2" style="border: 3px solid #D4FF00;">
           <strong>{{userId}}</strong>
