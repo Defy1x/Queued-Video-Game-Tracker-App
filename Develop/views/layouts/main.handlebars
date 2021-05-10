@@ -3,22 +3,72 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.82.0">
-    <title>Queued</title>
+    <title>Queued Video Game Tracker</title>
     <!-- Bootstrap core CSS -->
     <link rel='icon' href='./img/favicon.ico' type='image/x-icon'/ >
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
   </head>
-  <body class="d-flex flex-column h-100">
+  <sidebar>
+    <div class="d-flex flex-column p-3 text-white" style="height:100vh; background-color:#0A161D;">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"></svg>
+        <span class="fs-4"><img src="./img/logo.png" alt="Queued logo" width="100px;" style="margin: 0 auto;"></img>
+      </a>
+      <hr>
+      <h3 style="padding-bottom:10px; margin: none; text-align: left;">Explore</h3>
+      {{#if logged_in}}
+      <div class="form-container" style="text-align: left;">
+        <form id="game-form" name="game-form">
+          <input type="text" id="game-name" placeholder="Search for a Game" style="border-radius: 5px; border: 0px; padding: 5px; width: 200px;">
+          <input type="submit" name="search-btn" id="search-btn" style="border-radius: 5px; border: 0px; height: 26px; padding: 5px;">
+        </form>
+      </div>
+      {{/if}}
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <h3 style="text-align: left;">My Collection</h3>
+        <li class="nav-item" style="text-align: left;">
+          <a href="/progress" class="nav-link text-white" aria-current="page">
+            In Progress
+          </a>
+        </li>
+        <li style="text-align: left;">
+          <a href="#" class="nav-link text-white">
+            Completed
+          </a>
+        </li>
+        <li style="text-align: left;">
+          <a href="#" class="nav-link text-white">
+            Not Started
+          </a>
+        </li>
+      <hr>
+      </ul>
+      {{#if logged_in}}
+      <h3 style="text-align: left;">My Settings</h3>
+      <hr>
+      <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./img/doomslayer.png" alt="" width="32" height="32" class="rounded-circle me-2" style="border: 3px solid #D4FF00;">
+          <strong>{{user.username}}Username</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+          <li><a class="dropdown-item" href="#">Enable Light Mode</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="/signout">Sign out</a></li>
+        </ul>
+      </div>
+      {{/if}}
+    </div>
+  </sidebar>
 
-<header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+<!-- <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #0A1E29 !important; border-bottom-style:#225B7B;">
     <div class="container-fluid">
       <a class="navbar-brand">Queued</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,9 +76,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
           {{#unless logged_in}}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/signin">Sign in</a>
@@ -42,19 +89,21 @@
           {{#if logged_in}}
           <div class="form-container">
             <form id="game-form" name="game-form">
-              <input type="text" id="game-name" placeholder="Search for a Game">
-              <input type="submit" name="search-btn" id="search-btn" value="">
+              <input type="text" id="game-name" placeholder="Search for a Game" style="border-radius: 5px; border: 0px; padding: 5px; width: 300px;">
+              <input type="submit" name="search-btn" id="search-btn" style="border-radius: 5px; border: 0px; height: 26px; padding: 5px;">
             </form>
           {{/if}}
         </ul>
       </div>
     </div>
   </nav>
-</header>
+</header> -->
+  <!-- <body class="d-flex flex-column h-100"> -->
 
+<body>
 <!-- Begin page content -->
   {{{body}}}
-
+</body>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

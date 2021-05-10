@@ -3,8 +3,8 @@ const { User, Game } = require("../models");
 const checkAuthorization = require("../utils/authorization");
 const useRawgApi = require('../services/rawg');
 
-// We grab only the username and comment content from this?
-router.get("/", async (req, res) => {
+
+router.get("/", checkAuthorization, async (req, res) => {
     try {
         const gamesData = await Game.findAll({
             include: [
@@ -54,7 +54,7 @@ router.get("/signout", async (req, res) => {
     }
 })
 
-router.get('/search-results', async (req, res) => {
+router.get('/search-results', checkAuthorization, async (req, res) => {
   const { search } = req.query
 
   try {
@@ -75,7 +75,7 @@ router.get('/search-results', async (req, res) => {
   }
 })
 
-router.get('/games/:id', async (req, res) => {
+router.get('/games/:id', checkAuthorization, async (req, res) => {
   const { id } = req.params
 
   try {
@@ -85,7 +85,7 @@ router.get('/games/:id', async (req, res) => {
 
     console.log( results );
 
-    res.render('search-details', {
+    res.render('game-details', {
       game: results.data,
       logged_in: req.session.logged_in, // logged in status from the session object
       userId: req.session.user_id // user id from the session object
