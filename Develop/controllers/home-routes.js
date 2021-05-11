@@ -16,11 +16,13 @@ router.get("/", checkAuthorization, async (req, res) => {
             ]
         });
         const games = gamesData.map((games) => games.get({ plain: true }));
-        console.log(games);
+        // console.log("I am here in" + JSON.stringify(games));
+        console.log("Session here" + JSON.stringify(req.user));
         res.render("homepage", {
             games,
             logged_in: req.session.logged_in, // logged in status from the session object
-            userId: req.session.user_id // user id from the session object
+            userId: req.session.user_id, // user id from the session object
+            user: req.session.user
         });
     } catch (err) {
         res.status(500).json(err);

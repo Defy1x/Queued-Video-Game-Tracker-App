@@ -60,12 +60,12 @@
       <div class="dropdown" style="padding-bottom: 20px;">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="/img/doomslayer.png" alt="" width="50" height="50" class="rounded-circle me-2" style="border: 3px solid #D4FF00;">
-          <strong>@Casassin</strong>
+          <strong>@{{game_creator.username}}</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
           <li><a class="dropdown-item" href="#">Enable Light Mode</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="/signout">Sign out</a></li>
+          <li><a class="dropdown-item" id="logout" href="/signout">Sign out</a></li>
         </ul>
       </div>
       {{/if}}

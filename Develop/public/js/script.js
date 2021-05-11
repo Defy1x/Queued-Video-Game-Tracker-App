@@ -12,8 +12,8 @@ $(document).ready(function() {
       return;
     }
 
-    //show search details page and render results
-    document.location.replace( `/search-results?search=${game}` );
+    //show search details on home page and render results
+    document.location.assign( `/search-results?search=${game}` );
 
     //clear game form value
     $('#game-name').val('');
