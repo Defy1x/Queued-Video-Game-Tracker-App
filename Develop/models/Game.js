@@ -33,35 +33,35 @@ Game.init(
           },
         gamePlatform: {
             type: DataTypes.TEXT,
-            allowNull: false,
+            allowNull: true,
           },
           gameGenre: {
               type: DataTypes.TEXT,
-              allowNull: false,
+              allowNull: true,
           },
           gameTag: {
               type: DataTypes.TEXT,
-              allowNull: false,
+              allowNull: true,
             },
           gameESRB: {
               type: DataTypes.STRING,
-              allowNull: false,
+              allowNull: true,
           },
         gameReleased: {
             type: DataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
           },
           gameRating:{
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
           },
           gamePublisher:{
             type: DataTypes.TEXT,
-            allowNull: false,
+            allowNull: true,
           },
           gameDeveloper:{
             type: DataTypes.TEXT,
-            allowNull: false,
+            allowNull: true,
           },
           gameStatus:{
             type: DataTypes.INTEGER,

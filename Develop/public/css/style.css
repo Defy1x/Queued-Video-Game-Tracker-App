@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
 }
+
 h2{
   color: #D4FE00;
   font-size: 30px;
@@ -11,52 +12,8 @@ h3{
   color: #44D3D5;
 }
 
-sidebar{
-  padding-top: 20px;
-  color: #0A161D;
-}
-
 hr{
    color: #44D3D5 !important;
-}
-
-.form-container{
-  width: 400px;
-}
-
-.user-space{
-  padding-right: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-.search-display{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.search-display a{
-  text-decoration: none;
-}
-
-.search-display p{
-  font-size: 20px;
-  color: white;
-}
-
-#search-btn{
-	height:40px;
-	width:40px;
-	border:0;
-	cursor:pointer;
-	background:transparent url(../img/search.png) center center no-repeat;
-  z-index: 1;
-  vertical-align: middle;
-  margin: 0;
-  color: transparent;
 }
 
 body {
@@ -74,9 +31,64 @@ h1{
   font-weight: 500;
   line-height: 38px;
 }
+
+sidebar{
+  padding-top: 20px;
+  color: #0A161D;
+}
+
 sidebar{
   width: 280px;
+}
 
+.form-container{
+  width: 400px;
+}
+
+.user-space{
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-display{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search-display a{
+  text-decoration: none;
+}
+
+.search-display p{
+  font-size: 20px;
+  color: white;
+}
+
+.game-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.game-details{
+  padding: 20px;
+}
+
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.game-details-image{
+  padding-top: 20px;
+}
+
+.game-details-column-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .card{
@@ -148,4 +160,16 @@ sidebar{
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+#search-btn{
+	height:40px;
+	width:40px;
+	border:0;
+	cursor:pointer;
+	background:transparent url(../img/search.png) center center no-repeat;
+  z-index: 1;
+  vertical-align: middle;
+  margin: 0;
+  color: transparent;
 }
