@@ -12,10 +12,8 @@ $(document).ready(function() {
       return;
     }
 
-    // run search game (1st api)
-    // search(game);
-    document.location.assign( `/search-results?search=${ game }` );
-    // navigate to /search-results?game=${game}
+    //show search details page and render results
+    document.location.replace( `/search-results?search=${game}` );
 
     //clear game form value
     $('#game-name').val('');
