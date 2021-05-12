@@ -51,13 +51,13 @@
     const dismissible = new Dismissible(document.querySelector('#dismissible-container'));
 
     document.querySelector('.trigger-in-progress.success').addEventListener('click', () => dismissible.success(
-      'Game added to library!'));
+      'Game added to In Progress library!'));
 
       document.querySelector('.trigger-completed.success').addEventListener('click', () => dismissible.success(
-        'Game added to library!'));
+        'Game added to Completed library!'));
 
       document.querySelector('.trigger-not-started.success').addEventListener('click', () => dismissible.success(
-        'Game added to library!'));
+        'Game added to Not Started library!'));
   };
 </script>
 
