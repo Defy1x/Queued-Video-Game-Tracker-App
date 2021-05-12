@@ -4,6 +4,8 @@ const updateGame = async (event) => {
     console.log("I am being clicked to update!")
 
     const gameStatus = event.target.getAttribute("data-gamestatus");
+    const gameId = event.target.getAttribute("data-gameid");
+
     const response = await fetch(`/api/game/${gameId}`, {
         method: "PUT",
         body: JSON.stringify({ gameStatus }),
@@ -21,12 +23,13 @@ const deleteGame = async (event) => {
 
     console.log("I am being clicked to delete!")
     const gameId = event.target.getAttribute("data-gameid");
+
     const response = await fetch(`/api/game/${gameId}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" }
     });
     if (response.ok) {
-        document.location.reload();
+        document.location.replace( '/' );
     } else {
         alert("Failed to delete from library.");
     }
