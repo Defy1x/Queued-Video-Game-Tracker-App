@@ -1,4 +1,5 @@
-const {
+const
+{
   name: gameName,
   description_raw: gameSummary,
   released: gameReleased,
@@ -12,7 +13,8 @@ const {
   esrb_rating: { name: gameESRB },
   website: gameWebsite,
 
-} = JSON.parse( document.querySelector('.game-details').dataset.game );
+}
+= JSON.parse( document.querySelector('.game-details').dataset.game );
 
 const createGame = async (event) => {
     event.stopPropagation();
@@ -41,6 +43,7 @@ const createGame = async (event) => {
         headers: { "Content-Type": "application/json" }
     });
     if (response.ok) {
+        console.log("Game Added!")
         document.location.reload();
     } else {
         alert("Failed to add game to library.");

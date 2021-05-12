@@ -27,9 +27,22 @@
       </div>
     </div>
     <div class="game-details-image">
-      <img src="{{usersGames.gameArtwork}}" width="350px" style="border-radius: 5px; border: 3px solid #D4FF00;"></img>
+      <img src="{{usersGames.gameArtwork}}" img id="myImg" width="350px" alt="{{ usersGames.gameName }}" style="border-radius: 5px; border: 3px solid #D4FF00;"></img>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption">Artwork of {{ usersGames.gameName }}</div>
+      </div>
       <p style="padding-top: 20px;"><a href="{{ usersGames.gameWebsite }}" target="_blank">{{ usersGames.gameWebsite }}</a></p>
     </div>
 </div>
 
+<script src="/js/lightbox.js"></script>
 <script src="/js/updategame.js"></script>
