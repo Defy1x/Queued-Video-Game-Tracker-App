@@ -7,13 +7,13 @@ router.get("/progress/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
-            gameStatus: req.params.gameStatus,
-            // userId: req.session.user_id
+            gameStatus: 1,
+            userId: req.session.user_id
           },
             include:
                 { model: User, as: "game_creator" }
         });
-        const usersGames = userSpecificGames.get({ plain:true });
+        const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
         console.log(usersGames)
         res.status(200).render("progress", {
             usersGames,
@@ -21,6 +21,7 @@ router.get("/progress/:id", checkAuthorization, async (req, res) => {
             userId: req.session.user_id
         })
     } catch (err) {
+        console.log(err)
         res.status(400).json("Page not found!");
     }
 });
@@ -30,13 +31,13 @@ router.get("/completed/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
-            gameStatus: req.params.id,
+            gameStatus: 2,
             userId: req.session.user_id
           },
             include:
                 { model: User, as: "game_creator" }
         });
-        const usersGames = userSpecificGames.get({ plain:true });
+        const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
         console.log(usersGames)
         res.status(200).render("completed", {
             usersGames,
@@ -53,13 +54,13 @@ router.get("/notstarted/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
-            gameStatus: req.params.id,
+            gameStatus: 3,
             userId: req.session.user_id
           },
             include:
                 { model: User, as: "game_creator" }
         });
-        const usersGames = userSpecificGames.get({ plain:true });
+        const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
         console.log(usersGames)
         res.status(200).render("notstarted", {
             usersGames,
