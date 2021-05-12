@@ -25,7 +25,7 @@ Game.init(
         },
         gameSummary:{
           type: DataTypes.TEXT,
-          allowNull: false,
+          allowNull: true,
         },
         gameArtwork: {
             type: DataTypes.TEXT,
@@ -48,7 +48,7 @@ Game.init(
               allowNull: true,
           },
         gameReleased: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: true,
           },
           gameRating:{

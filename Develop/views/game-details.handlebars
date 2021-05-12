@@ -1,0 +1,34 @@
+
+  <div class="game-container" style="height: 100vh; margin: 20px; padding-top: 30px;">
+      <div class="game-details">
+      <h1 style="font-size: 50px; padding-bottom: 20px; line-height: 64px;">{{ usersGames.gameName }}</h1>
+      <h4 style="color: #D4FF00;">Add This Game to:</h4>
+      <div class="buttons-container" style="padding-bottom: 20px;">
+        <button class="w-20 btn btn-sm btn-primary update-game" type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;">In Progress</button>
+        <button class="w-20 btn btn-sm btn-primary update-game" type="submit" style="background-color:#007DC3; margin: 10px;">Completed</button>
+        <button class="w-20 btn btn-sm btn-primary update-game" type="submit" style="background-color:#007DC3; margin: 10px;">Not Started</button>
+        <button class="w-20 btn btn-sm btn-primary delete-game" type="submit" style="background-color:#C30000; margin: 10px;">Remove Game</button>
+      </div>
+      <h4>Description:</h4>
+      <p style="font-size:14px; line-height: 22px;">{{ usersGames.gameSummary }}</p>
+      <div class="game-details-column-container">
+        <div class="game-details-column1">
+          <p><strong style="font-size: 20px;">Released:</strong>&nbsp;{{usersGames.gameReleased}}</p>
+          <p><strong style="font-size: 20px;">Tags(s):</strong>&nbsp;{{usersGames.gameTag}}</p>
+          <p><strong style="font-size: 20px;">Genre(s):</strong>&nbsp;{{usersGames.gameGenre}}</p>
+          <p><strong style="font-size: 20px;">Metacritic Score:</strong>&nbsp;{{usersGames.gameRating}}</p>
+        </div>
+        <div class="game-details-column2">
+          <p><strong style="font-size: 20px;">Platform(s):</strong>&nbsp;{{ usersGames.gamePlatform }}</p>
+          <p><strong style="font-size: 20px;">Developer(s):</strong>&nbsp;{{ usersGames.gameDeveloper }}</p>
+          <p><strong style="font-size: 20px;">Publisher(s):</strong>&nbsp;{{usersGames.gamePublisher }}</p>
+          <p><strong style="font-size: 20px;">ESRB Rating:</strong>&nbsp;{{usersGames.gameESRB }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="game-details-image">
+      <img src="{{usersGames.gameArtwork}}" width="300px" style="border-radius: 5px; border: 3px solid #D4FF00;"></img>
+    </div>
+</div>
+
+<script src="../js/updategame.js"></script>

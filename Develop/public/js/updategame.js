@@ -10,7 +10,7 @@ const updateGame = async (event) => {
     if (response.ok) {
         document.location.reload();
     } else {
-        alert("Failed to update post.");
+        alert("Failed to update game.");
     }
 };
 
@@ -25,7 +25,7 @@ const deleteGame = async (event) => {
     if (response.ok) {
         document.location.reload();
     } else {
-        alert("Failed to delete post.");
+        alert("Failed to delete from library.");
     }
 }
 

@@ -6,7 +6,7 @@ const homeRoutes = require("./home-routes");
 const libraryRoutes = require("./library-routes");
 
 router.use("/", homeRoutes);
-router.use("/library", libraryRoutes);
+router.use("/library", checkAuthorization, libraryRoutes);
 router.use("/api", apiRoutes);
 
 module.exports = router;

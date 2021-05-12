@@ -6,7 +6,6 @@ const createGame = async (event) => {
     const gameStatus = event.target.getAttribute("data-gamestatus");
 
     const response = await fetch("/api/game/", {
-        console.log("game added! with game status of" + gameStatus)
         method: "POST",
         body: JSON.stringify({ gameStatus }),
         headers: { "Content-Type": "application/json" }
@@ -14,7 +13,7 @@ const createGame = async (event) => {
     if (response.ok) {
         document.location.reload();
     } else {
-        alert("Failed to create post.");
+        alert("Failed to add game to library.");
     }
 }
 
