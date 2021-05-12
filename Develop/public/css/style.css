@@ -23,7 +23,9 @@ body {
   padding-top: 20px;
   padding-bottom: 50px;
   background-color: #0A1E29;
-  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Quicksand', sans-serif; */
+  /* font-family: 'Rubik', sans-serif; */
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 h1{
