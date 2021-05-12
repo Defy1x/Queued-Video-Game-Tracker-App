@@ -17,6 +17,12 @@
       <a href="/" class="d-flex align-items-center p-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <span class="fs-4"><img src="/img/logo.png" alt="Queued logo" width="120px;" style="padding-left: 10px; padding-bottom: 20px;"></img>
       </a>
+      <!-- {{#if logged_in}}
+        <div class="user-space">
+          <img src="/img/doomslayer.png" alt="user" width="70px" height="70px" class="rounded-circle me-2" style="border: 3px solid #D4FF00;"></img>
+          <strong style="padding-top: 10px; padding-bottom: 20px;">@username</strong>
+        </div>
+      {{/if}} -->
       <h3 style="padding-bottom:10px; margin: none; text-align: left;">Explore Games</h3>
       {{#if logged_in}}
       <div class="form-container" style="text-align: left;">
@@ -28,12 +34,6 @@
       {{/if}}
       <hr>
       <ul class="nav nav-pills flex-column mb-auto">
-        <!-- {{#if logged_in}}
-          <div class="user-space">
-            <img src="./img/doomslayer.png" alt="user" width="70px" height="70px" class="rounded-circle me-2" style="border: 3px solid #D4FF00;"></img>
-            <strong style="padding-top: 10px; padding-bottom: 20px;">@username</strong>
-          </div>
-        {{/if}} -->
         <h3 style="text-align: left;">My Collection</h3>
         {{#if logged_in}}
         <li class="nav-item" style="text-align: left;">
@@ -63,7 +63,7 @@
           <strong>@{{game_creator.username}}</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-          <li><a class="dropdown-item" href="https://uxfol.io/project/03c0ede6/Queu-ed--Video-Game-Tracker" target="_blank">About this App</a></li>
+          <li><a class="dropdown-item" href="https://uxfol.io/project/03c0ede6/Queu-ed--Video-Game-Tracker" target="_blank">About Queu(ed)</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" id="logout" href="/signout">Sign out</a></li>
         </ul>

@@ -4,10 +4,10 @@
       <h1 style="font-size: 50px; padding-bottom: 20px; line-height: 64px;">{{ usersGames.gameName }}</h1>
       <h4 style="color: #D4FF00;">Add This Game to:</h4>
       <div class="buttons-container" style="padding-bottom: 20px;">
-        <button class="w-20 btn btn-sm btn-primary update-game-in-progress" data-gamestatus=1  data-gameid="{{usersGames.id}}" type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;">In Progress</button>
-        <button class="w-20 btn btn-sm btn-primary update-game-completed" data-gamestatus=2 data-gameid="{{usersGames.id}}" type="submit" style="background-color:#007DC3; margin: 10px;">Completed</button>
-        <button class="w-20 btn btn-sm btn-primary update-game-not-started" data-gamestatus=3  data-gameid="{{usersGames.id}}" type="submit" style="background-color:#007DC3; margin: 10px;">Not Started</button>
-        <button class="w-20 btn btn-sm btn-primary delete-game" type="submit" data-gameid="{{usersGames.id}}" style="background-color:#C30000; margin: 10px;">Remove Game</button>
+        <button class="w-20 btn btn-sm btn-primary update-game-in-progress" data-gamestatus=1  data-gameid="{{usersGames.id}}" type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;"><img src="/img/bolt.png" width="10px;"></img>&nbsp;&nbsp;In Progress</button>
+        <button class="w-20 btn btn-sm btn-primary update-game-completed" data-gamestatus=2 data-gameid="{{usersGames.id}}" type="submit" style="background-color:#007DC3; margin: 10px;"><img src="/img/trophy.png" width="15px;"></img>&nbsp;&nbsp;Completed</button>
+        <button class="w-20 btn btn-sm btn-primary update-game-not-started" data-gamestatus=3  data-gameid="{{usersGames.id}}" type="submit" style="background-color:#007DC3; margin: 10px;"><img src="/img/diamond.png" width="15px;"></img>&nbsp;&nbsp;Not Started</button>
+        <button class="w-20 btn btn-sm btn-primary delete-game" type="submit" data-gameid="{{usersGames.id}}" style="background-color:#C30000; margin: 10px;"><img src="/img/trash.png" width="11px;"></img>&nbsp;&nbsp;Remove Game</button>
       </div>
       <h4>Description:</h4>
       <p style="font-size:14px; line-height: 22px;">{{ usersGames.gameSummary }}</p>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="game-details-image">
-      <img src="{{usersGames.gameArtwork}}" width="300px" style="border-radius: 5px; border: 3px solid #D4FF00;"></img>
+      <img src="{{usersGames.gameArtwork}}" width="350px" style="border-radius: 5px; border: 3px solid #D4FF00;"></img>
     </div>
 </div>
 

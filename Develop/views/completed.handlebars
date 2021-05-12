@@ -1,9 +1,9 @@
 <body class="text-center" style="margin: 0 auto;">
   <div class="search-display" style=" height: 100vh; margin: 20px;">
     {{#each usersGames as |game|}}
-    <div class="card" style="width: 15rem; margin: 10px; background-color: #0A161D; text-align: center !important; border-radius: 15px; padding: 20px;">
+    <div class="card" style="width: 12rem; height: 30%; margin: 10px; background-color: #0A161D; text-align: center !important; border-radius: 15px; padding: 10px;">
             <a href="/library/details/{{game.id}}">
-              <img src="{{game.gameArtwork}}" width="100%;" style="border-radius: 15px;"></img>
+              <img src="{{game.gameArtwork}}" width="100%;" style="border-radius: 10px;"></img>
             <p class="card-text" style="padding-top: 10px; font-size: 1em;">
                 {{ game.gameName }}
             </p>
