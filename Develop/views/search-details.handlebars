@@ -1,15 +1,15 @@
 
   <div class="game-container" style="height: 100vh; margin: 20px; padding-top: 10px;">
-
+      <div id="dismissible-container"></div>
       <div class="game-details" data-game="{{stringify game}}">
       <a href="javascript:history.back()" style="text-decoration:none; font-size: 20px; color: white; padding-bottom: 20px;"> < Back to Search Results</a>
       <hr>
       <h1 style="font-size: 50px; padding-bottom: 20px; line-height: 60px;">{{ game.name }}</h1>
       <h4 style="color: #D4FF00;">Add This Game to:</h4>
       <div class="buttons-container" style="padding-bottom: 20px;">
-        <button class="w-20 btn btn-sm btn-primary new-game-in-progress"  data-gamestatus=1 type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;"><img src="/img/bolt.png" width="10px;"></img>&nbsp;&nbsp;In Progress</button>
-        <button class="w-20 btn btn-sm btn-primary new-game-completed" data-gamestatus=2  type="submit" style="background-color:#007DC3; margin: 10px;"><img src="/img/trophy.png" width="15px;"></img>&nbsp;&nbsp;Completed</button>
-        <button class="w-20 btn btn-sm btn-primary new-game-not-started" data-gamestatus=3  type="submit" style="background-color:#007DC3; margin: 10px;"><img src="/img/diamond.png" width="15px;"></img>&nbsp;&nbsp;Not Started</button>
+        <button class="w-20 btn btn-sm btn-primary new-game-in-progress trigger-in-progress success"  data-gamestatus=1 type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;"><img src="/img/bolt.png" width="10px;"></img>&nbsp;&nbsp;In Progress</button>
+        <button class="w-20 btn btn-sm btn-primary new-game-completed trigger-completed success" data-gamestatus=2  type="submit" style="background-color:#007DC3; margin: 10px;"><img src="/img/trophy.png" width="15px;"></img>&nbsp;&nbsp;Completed</button>
+        <button class="w-20 btn btn-sm btn-primary new-game-not-started trigger-not-started success" data-gamestatus=3  type="submit" style="background-color:#007DC3; margin: 10px;"><img src="/img/diamond.png" width="15px;"></img>&nbsp;&nbsp;Not Started</button>
       </div>
       <h4>Description:</h4>
       <p style="font-size:14px; line-height: 24px;">{{game.description_raw}}</p>
@@ -46,6 +46,21 @@
     </div>
 </div>
 
+<script type="text/javascript">
+  window.onload = function () {
+    const dismissible = new Dismissible(document.querySelector('#dismissible-container'));
 
+    document.querySelector('.trigger-in-progress.success').addEventListener('click', () => dismissible.success(
+      'Game added to library!'));
+
+      document.querySelector('.trigger-completed.success').addEventListener('click', () => dismissible.success(
+        'Game added to library!'));
+
+      document.querySelector('.trigger-not-started.success').addEventListener('click', () => dismissible.success(
+        'Game added to library!'));
+  };
+</script>
+
+<script src="/js/dismissible.js"></script>
 <script src="/js/lightbox.js"></script>
 <script src="/js/savegame.js"></script>

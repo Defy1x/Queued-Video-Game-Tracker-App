@@ -12,7 +12,7 @@ const updateGame = async (event) => {
         headers: { "Content-Type": "application/json" }
     });
     if (response.ok) {
-        document.location.reload();
+        // document.location.reload();
     } else {
         alert("Failed to update game.");
     }

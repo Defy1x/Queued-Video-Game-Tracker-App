@@ -1,4 +1,6 @@
 
+
+
 const gameData = JSON.parse( document.querySelector('.game-details').dataset.game);
 
 const gameName = gameData.name;
@@ -42,7 +44,7 @@ const createGame = async (event) => {
     });
     if (response.ok) {
         console.log("Game Added!")
-        document.location.reload();
+        // document.location.reload();
     } else {
         alert("Failed to add game to library.");
     }
