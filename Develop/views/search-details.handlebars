@@ -1,6 +1,9 @@
 
-  <div class="game-container" style="height: 100vh; margin: 20px; padding-top: 30px;">
+  <div class="game-container" style="height: 100vh; margin: 20px; padding-top: 10px;">
+
       <div class="game-details" data-game="{{stringify game}}">
+      <a href="javascript:history.back()" style="text-decoration:none; font-size: 20px; color: white; padding-bottom: 20px;"> < Back to Search Results</a>
+      <hr>
       <h1 style="font-size: 50px; padding-bottom: 20px; line-height: 60px;">{{ game.name }}</h1>
       <h4 style="color: #D4FF00;">Add This Game to:</h4>
       <div class="buttons-container" style="padding-bottom: 20px;">
@@ -25,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="game-details-image">
+    <div class="game-details-image" style="padding-top: 90px; padding-left: 10px;">
       <img src="{{game.background_image}}" img id="myImg" width="350px" alt="{{game.name}}" style="border-radius: 5px; border: 3px solid #D4FF00;"></img>
       <!-- The Modal -->
       <div id="myModal" class="modal">
