@@ -68,6 +68,7 @@ router.post("/", async (req, res) => {
           gameRating: req.body.gameRating,
           gamePublisher: req.body.gamePublisher,
           gameDeveloper: req.body.gameDeveloper,
+          gameWebsite: req.body.gameWebsite,
           gameStatus: req.body.gameStatus,
         });
         res.status(200).json(newGame);

@@ -45,6 +45,10 @@ sidebar{
   width: 400px;
 }
 
+.card a:hover{
+ opacity: .5;
+}
+
 .user-space{
   padding-right: 100px;
   display: flex;

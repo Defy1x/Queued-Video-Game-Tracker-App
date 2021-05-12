@@ -15,6 +15,7 @@ const gameData = [
         gameRating: 88,
         gamePublisher: "Bethesda Softworks",
         gameDeveloper: "Bethesda Softworks",
+        gameWebsite:"https://bethesda.net/en/game/doom",
         gameStatus: 1,
     },
     {
@@ -30,6 +31,7 @@ const gameData = [
         gameRating: 86,
         gamePublisher: "Sony Interactive Entertainment",
         gameDeveloper: "Housemarque",
+        gameWebsite:"https://housemarque.com/games/returnal",
         gameStatus: 2,
     },
     {
@@ -45,6 +47,7 @@ const gameData = [
         gameRating: 84,
         gamePublisher: "505 Games",
         gameDeveloper: "505 Games",
+        gameWebsite: "https://controlgame.com/",
         gameStatus: 3,
     }
 ]

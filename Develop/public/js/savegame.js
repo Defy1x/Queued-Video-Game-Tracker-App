@@ -10,6 +10,7 @@ const {
   developers: [ { name: gameDeveloper } ],
   publishers: [ { name: gamePublisher } ],
   esrb_rating: { name: gameESRB },
+  website: gameWebsite,
 
 } = JSON.parse( document.querySelector('.game-details').dataset.game );
 
@@ -30,6 +31,7 @@ const createGame = async (event) => {
       gameDeveloper,
       gamePublisher,
       gameESRB,
+      gameWebsite,
       gameStatus
     } );
 

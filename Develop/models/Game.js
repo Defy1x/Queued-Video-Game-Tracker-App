@@ -66,6 +66,10 @@ Game.init(
           gameStatus:{
             type: DataTypes.INTEGER,
             allowNull: true,
+          },
+          gameWebsite:{
+            type: DataTypes.STRING,
+            allowNull: true,
           }
       },
     {
