@@ -178,7 +178,7 @@ sidebar{
 	cursor:pointer;
 	background:transparent url(../img/search.png) center center no-repeat;
   z-index: 1;
-  vertical-align: middle;
+  vertical-align: top;
   margin: 0;
   color: transparent;
 }
@@ -260,6 +260,10 @@ button{
  color: #bbb;
  text-decoration: none;
  cursor: pointer;
+}
+
+a{
+  color: #44d3d5 !important;
 }
 
 /* 100% Image Width on Smaller Screens */
