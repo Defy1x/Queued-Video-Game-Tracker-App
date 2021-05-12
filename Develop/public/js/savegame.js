@@ -1,20 +1,18 @@
-const
-{
-  name: gameName,
-  description_raw: gameSummary,
-  released: gameReleased,
-  background_image: gameArtwork,
-  tags: [ { name: gameTag } ],
-  genres: [ { name: gameGenre } ],
-  metacritic: gameRating,
-  platforms: [ { platform: { name: gamePlatform } } ],
-  developers: [ { name: gameDeveloper } ],
-  publishers: [ { name: gamePublisher } ],
-  esrb_rating: { name: gameESRB },
-  website: gameWebsite,
 
-}
-= JSON.parse( document.querySelector('.game-details').dataset.game );
+const gameData = JSON.parse( document.querySelector('.game-details').dataset.game);
+
+const gameName = gameData.name;
+const gameSummary = gameData.description_raw;
+const gameReleased = gameData.released;
+const gameArtwork = gameData.background_image;
+const gameTag = gameData.tags?.[0]?.name;
+const gameGenre = gameData.genres?.[0]?.name;
+const gameRating = gameData.metacritic;
+const gamePlatform = gameData.platforms?.[0]?.platform?.name;
+const gameDeveloper = gameData.developers?.[0]?.name;
+const gamePublisher = gameData.publishers?.[0]?.name;
+const gameESRB = gameData.esrb_rating?.name;
+const gameWebsite = gameData.website;
 
 const createGame = async (event) => {
     event.stopPropagation();
