@@ -1,20 +1,21 @@
-$(document).ready(function() {
+const createGame = async (event) => {
+    event.stopPropagation();
 
-  $('#game-form').submit(function(e){
-    e.preventDefault();
-    game = $('#game-name').val().toLowerCase();
+    console.log("I am being clicked!");
 
-    console.log(game);
+    const gameStatus = event.target.getAttribute("data-gamestatus");
 
-    // if no value entered for game then exit
-    if (!game){
-      return;
+    const response = await fetch("/api/game/", {
+        console.log("game added! with game status of" + gameStatus)
+        method: "POST",
+        body: JSON.stringify({ gameStatus }),
+        headers: { "Content-Type": "application/json" }
+    });
+    if (response.ok) {
+        document.location.reload();
+    } else {
+        alert("Failed to create post.");
     }
+}
 
-    //show search details on home page and render results
-    document.location.assign( `/search-results?search=${game}` );
-
-    //clear game form value
-    $('#game-name').val('');
-  })
-})
+document.querySelector(".new-game").addEventListener("click", createGame);

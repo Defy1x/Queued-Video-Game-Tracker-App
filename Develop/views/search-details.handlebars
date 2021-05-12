@@ -4,9 +4,9 @@
       <h1 style="font-size: 50px; padding-bottom: 20px; line-height: 64px;">{{ game.name }}</h1>
       <h4 style="color: #D4FF00;">Add This Game to:</h4>
       <div class="buttons-container" style="padding-bottom: 20px;">
-        <button class="w-20 btn btn-sm btn-primary" type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;">In Progress</button>
-        <button class="w-20 btn btn-sm btn-primary" type="submit" style="background-color:#007DC3; margin: 10px;">Completed</button>
-        <button class="w-20 btn btn-sm btn-primary" type="submit" style="background-color:#007DC3; margin: 10px;">Not Started</button>
+        <button class="w-20 btn btn-sm btn-primary new-game"  data-gamestatus=1 type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;">In Progress</button>
+        <button class="w-20 btn btn-sm btn-primary new-game" data-gamestatus=2  type="submit" style="background-color:#007DC3; margin: 10px;">Completed</button>
+        <button class="w-20 btn btn-sm btn-primary new-game" data-gamestatus=3  type="submit" style="background-color:#007DC3; margin: 10px;">Not Started</button>
       </div>
       <h4>Description:</h4>
       <p style="font-size:14px; line-height: 22px;">{{game.description_raw}}</p>
