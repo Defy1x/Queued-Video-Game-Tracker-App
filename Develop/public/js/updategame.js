@@ -1,6 +1,8 @@
 const updateGame = async (event) => {
     event.stopPropagation();
 
+    console.log("I am being clicked to update!")
+
     const gameStatus = event.target.getAttribute("data-gamestatus");
     const response = await fetch(`/api/game/${gameId}`, {
         method: "PUT",
@@ -17,6 +19,7 @@ const updateGame = async (event) => {
 const deleteGame = async (event) => {
     event.stopPropagation();
 
+    console.log("I am being clicked to delete!")
     const gameId = event.target.getAttribute("data-gameid");
     const response = await fetch(`/api/game/${gameId}`, {
         method: "DELETE",
@@ -29,9 +32,10 @@ const deleteGame = async (event) => {
     }
 }
 
-document.querySelector(".update-game")game.addEventListener("click", updateGame);
-
-document.querySelector(".delete-game")game.addEventListener("click", deleteGame);
+document.querySelector(".update-game-in-progress").addEventListener("click", updateGame);
+document.querySelector(".update-game-completed").addEventListener("click", updateGame);
+document.querySelector(".update-game-not-started").addEventListener("click", updateGame);
+document.querySelector(".delete-game").addEventListener("click", deleteGame);
 
 // document.querySelectorAll(".update-game").forEach((game) => {
 //     post.addEventListener("click", updateGame);

@@ -7,8 +7,8 @@ router.get("/progress/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
-            gameStatus: req.params.id,
-            userId: req.session.user_id
+            gameStatus: req.params.gameStatus,
+            // userId: req.session.user_id
           },
             include:
                 { model: User, as: "game_creator" }
@@ -49,7 +49,7 @@ router.get("/completed/:id", checkAuthorization, async (req, res) => {
 });
 
 //searches and returns all games with the status of not started
-router.get("/notstarted/:id",checkAuthorization, async (req, res) => {
+router.get("/notstarted/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findAll({
           where: {
@@ -71,7 +71,7 @@ router.get("/notstarted/:id",checkAuthorization, async (req, res) => {
     }
 });
 
-router.get("/details/:id", async (req, res) => {
+router.get("/details/:id", checkAuthorization, async (req, res) => {
     try {
         const userSpecificGames = await Game.findByPk(req.params.id, {
             include:
