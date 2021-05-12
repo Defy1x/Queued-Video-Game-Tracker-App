@@ -39,10 +39,3 @@ document.querySelector(".update-game-in-progress").addEventListener("click", upd
 document.querySelector(".update-game-completed").addEventListener("click", updateGame);
 document.querySelector(".update-game-not-started").addEventListener("click", updateGame);
 document.querySelector(".delete-game").addEventListener("click", deleteGame);
-
-// document.querySelectorAll(".update-game").forEach((game) => {
-//     post.addEventListener("click", updateGame);
-// });
-// document.querySelectorAll(".delete-game").forEach((game) => {
-//     post.addEventListener("click", deleteGame);
-// });

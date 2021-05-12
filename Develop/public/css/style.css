@@ -76,6 +76,11 @@ sidebar{
   flex-direction: row;
 }
 
+.game-display{
+  display: flex;
+  flex-direction: column;
+}
+
 .game-details{
   padding: 20px;
 }

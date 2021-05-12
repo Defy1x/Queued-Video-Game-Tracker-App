@@ -1,18 +1,6 @@
 const { User, Game } = require("../../models");
 const router = require("express").Router();
-// const { searchGames } = require('../../services/rawg');
 
-// router.get("/search", async (req, res) => { // /api/games/serach?title=Skyrim
-//   const { searchVal } = req.query
-//   const games = await searchGames( searchVal );
-//   const serializedGames = games.map( ({ name, platforms, released, backgound_image }) => ({
-//     name,
-//     platforms: platforms.map( ({name}) => name ),
-//     released,
-//     background_image
-//   }))
-//   return serializedGames;
-// });
 
 router.get("/", async (req, res) => {
     try {
