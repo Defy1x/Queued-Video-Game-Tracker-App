@@ -207,8 +207,9 @@ sidebar{
  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
-.delete-game button:focus{
-    outline: none; 
+button{
+  border: none !important;
+  outline:none !important;
 }
 
 /* Modal Content (Image) */
