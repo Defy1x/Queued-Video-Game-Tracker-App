@@ -3,13 +3,13 @@ const {
   description_raw: gameSummary,
   released: gameReleased,
   background_image: gameArtwork,
-  tags.0.name: gameTag,
-  genres.0.name: gameGenre,
+  tags: [ { name: gameTag } ],
+  genres: [ { name: gameGenre } ],
   metacritic: gameRating,
-  platforms.0.platform.name: gamePlatform,
-  developers.0.name: gameDeveloper,
-  publishers.0.name: gamePublisher,
-  esrb_rating.name: gameESRB,
+  platforms: [ { platform: { name: gamePlatform } } ],
+  developers: [ { name: gameDeveloper } ],
+  publishers: [ { name: gamePublisher } ],
+  esrb_rating: { name: gameESRB },
 
 } = JSON.parse( document.querySelector('.game-details').dataset.game );
 
@@ -18,7 +18,7 @@ const createGame = async (event) => {
 
     const gameStatus = event.target.getAttribute("data-gamestatus");
 
-    console.log( {
+    const body = JSON.stringify( {
       gameName,
       gameSummary,
       gameReleased,
@@ -30,11 +30,12 @@ const createGame = async (event) => {
       gameDeveloper,
       gamePublisher,
       gameESRB,
-      gameStatus } );
+      gameStatus
+    } );
 
     const response = await fetch("/api/game/", {
         method: "POST",
-        body: JSON.stringify({ gameStatus }),
+        body,
         headers: { "Content-Type": "application/json" }
     });
     if (response.ok) {
