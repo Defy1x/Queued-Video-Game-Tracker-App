@@ -4,7 +4,7 @@
       <div class="game-details" data-game="{{stringify game}}">
       <a href="javascript:history.back()" style="text-decoration:none; font-size: 20px; color: white; padding-bottom: 20px;"> < Back to Search Results</a>
       <hr>
-      <h1 style="font-size: 50px; padding-bottom: 20px; line-height: 60px;">{{ game.name }}</h1>
+      <h1 style="font-size: 50px; padding-bottom: 20px; line-height: 56px;">{{ game.name }}</h1>
       <h4 style="color: #D4FF00;">Add This Game to:</h4>
       <div class="buttons-container" style="padding-bottom: 20px;">
         <button class="w-20 btn btn-sm btn-primary new-game-in-progress trigger-in-progress success"  data-gamestatus=1 type="submit" style="background-color:#007DC3; margin-right: 10px; margin-bottom: 10px; margin-top: 10px;"><img src="/img/bolt.png" width="10px;"></img>&nbsp;&nbsp;In Progress</button>
@@ -14,7 +14,7 @@
       <h4>Description:</h4>
       <p style="font-size:14px; line-height: 24px;">{{game.description_raw}}</p>
       <div class="game-details-column-container">
-        <div class="game-details-column1">
+        <div class="game-details-column1" style="margin-right: 10px;">
           <p><strong style="font-size: 20px;">Released:</strong>&nbsp;{{game.released}}</p>
           <p><strong style="font-size: 20px;">Tags(s):</strong>&nbsp;{{game.tags.0.name}}</p>
           <p><strong style="font-size: 20px;">Genre(s):</strong>&nbsp;{{game.genres.0.name}}</p>
