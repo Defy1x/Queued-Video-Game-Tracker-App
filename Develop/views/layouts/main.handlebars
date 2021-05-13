@@ -18,14 +18,14 @@
   <sidebar>
     <div class="d-flex flex-column p-3 text-white" style="height:100vh; background-color:#0A161D; border-radius: 10px; padding-top: 10px;">
       <a href="/" class="d-flex align-items-center p-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <span class="fs-4"><img src="/img/logo.png" alt="Queued logo" width="120px;" style="margin-bottom: 20px;"></img>
+        <span class="fs-4"><img src="/img/logo.png" alt="Queued logo" width="120px;" style="margin-bottom: 10px;"></img>
       </a>
-      <!-- {{#if logged_in}}
-        <div class="user-space">
-          <img src="/img/doomslayer.png" alt="user" width="70px" height="70px" class="rounded-circle me-2" style="border: 3px solid #D4FF00;"></img>
-          <strong style="padding-top: 10px; padding-bottom: 20px;">@username</strong>
+      {{#if logged_in}}
+        <div class="user-space" style="padding-left: 10px;">
+          <img src="/img/doomslayer.png" alt="user" width="65px" height="65px" class="rounded-circle me-2" style="border: 3px solid #D4FF00;"></img>
+          <strong style="padding-top: 10px; padding-bottom: 15px;">@username</strong>
         </div>
-      {{/if}} -->
+      {{/if}}
       <h3 style="padding-bottom:10px; margin: none; text-align: left;">Explore Games</h3>
       {{#if logged_in}}
       <div class="form-container" style="text-align: left;">
@@ -62,7 +62,7 @@
       <hr>
       <div class="dropdown" style="padding-bottom: 20px;">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="/img/doomslayer.png" alt="" width="50" height="50" class="rounded-circle me-2" style="border: 3px solid #D4FF00;">
+          <img src="/img/doomslayer.png" alt="" width="45" height="45" class="rounded-circle me-2" style="border: 3px solid #D4FF00;">
           <strong>{{usersGames.game_creator.username}}</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">

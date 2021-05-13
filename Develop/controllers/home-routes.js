@@ -6,6 +6,21 @@ const useRawgApi = require('../services/rawg');
 
 router.get("/", checkAuthorization, async (req, res) => {
 
+      // try {
+      //     const userSpecificGames = await Game.findByPk(req.params.id, {
+      //         include:
+      //             { model: User, as: "game_creator" }
+      //     });
+      //     const usersGames = userSpecificGames.get({ plain:true });
+      //     console.log(usersGames)
+      //     res.status(200).render("game-details", {
+      //         usersGames,
+      //         logged_in: req.session.logged_in,
+      //         userId: req.session.user_id
+      //     })
+      // } catch (err) {
+      //     res.status(400).json("Page not found!");
+      // }
 
 
 //code below this line works
