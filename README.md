@@ -33,7 +33,7 @@ Instead of using the front end you developed for your first project, you should 
 Please add your user name and password to the config file. You will need an API key from rawg.io in the service layer to perform searches.Also install npm packages needed to run this program.
 
 ## Deployed Heroku Link
-Heroku Link coming shortly.
+http://www.queued-app.com
 
 ## Link to Github
 https://github.com/Defy1x/Queued-Video-Game-Tracker-App
