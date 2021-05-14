@@ -23,7 +23,7 @@
       {{#if logged_in}}
         <div class="user-space" style="padding-left: 10px;">
           <img src="/img/doomslayer.png" alt="user" width="65px" height="65px" class="rounded-circle me-2" style="border: 3px solid #D4FF00;"></img>
-          <strong style="padding-top: 10px; padding-bottom: 15px; padding-right: 5px;">{{usersGames.game_creator.username}}</strong>
+          <strong style="padding-top: 10px; padding-bottom: 15px; padding-right: 5px;">{{usersDisplay.game_creator.username}}</strong>
         </div>
       {{/if}}
       <h3 style="padding-bottom:10px; margin: none; text-align: left;">Explore Games</h3>
@@ -63,7 +63,7 @@
       <div class="dropdown" style="padding-bottom: 20px;">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
           <img src="/img/doomslayer.png" alt="" width="45" height="45" class="rounded-circle me-2" style="border: 3px solid #D4FF00;">
-          <strong>{{usersGames.game_creator.username}}</strong>
+          <strong>{{usersDisplay.game_creator.username}}</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
           <li><a class="dropdown-item" href="https://uxfol.io/project/03c0ede6/Queu-ed--Video-Game-Tracker" target="_blank">About Queu(ed)</a></li>

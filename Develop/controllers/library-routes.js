@@ -15,7 +15,13 @@ router.get("/progress/:id", checkAuthorization, async (req, res) => {
         });
         const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
         console.log(usersGames)
+
+        const user = await User.findByPk(req.session.user_id)
+        const userObj = user.get({plain: true})
+        const usersDisplay = {game_creator: {username: userObj.username}}
+
         res.status(200).render("progress", {
+            usersDisplay,
             usersGames,
             logged_in: req.session.logged_in,
             userId: req.session.user_id
@@ -25,6 +31,35 @@ router.get("/progress/:id", checkAuthorization, async (req, res) => {
         res.status(400).json("Page not found!");
     }
 });
+
+router.get("/stats", async (req, res) => {
+
+  // res.json("hey!");
+
+    try {
+        const userSpecificGames = await Game.count({
+              attributes: ['gameStatus'],
+              group: 'gameStatus',
+          where: {
+            // gameStatus: 1,
+            userId: req.session.user_id
+          },
+            include:
+                { model: User, as: "game_creator" }
+        });
+        // const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
+        // console.log(usersGames)
+        res.status(200).json({
+          userSpecificGames,
+          logged_in: req.session.logged_in,
+          userId: req.session.user_id
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json("Page not found!");
+    }
+});
+
 
 //searches and returns all games with a status of completed
 router.get("/completed/:id", checkAuthorization, async (req, res) => {
@@ -39,7 +74,11 @@ router.get("/completed/:id", checkAuthorization, async (req, res) => {
         });
         const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
         console.log(usersGames)
+        const user = await User.findByPk(req.session.user_id)
+        const userObj = user.get({plain: true})
+        const usersDisplay = {game_creator: {username: userObj.username}}
         res.status(200).render("completed", {
+            usersDisplay,
             usersGames,
             logged_in: req.session.logged_in,
             userId: req.session.user_id
@@ -62,7 +101,11 @@ router.get("/notstarted/:id", checkAuthorization, async (req, res) => {
         });
         const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
         console.log(usersGames)
+        const user = await User.findByPk(req.session.user_id)
+        const userObj = user.get({plain: true})
+        const usersDisplay = {game_creator: {username: userObj.username}}
         res.status(200).render("notstarted", {
+            usersDisplay,
             usersGames,
             logged_in: req.session.logged_in,
             userId: req.session.user_id
@@ -80,7 +123,11 @@ router.get("/details/:id", checkAuthorization, async (req, res) => {
         });
         const usersGames = userSpecificGames.get({ plain:true });
         console.log(usersGames)
+        const user = await User.findByPk(req.session.user_id)
+        const userObj = user.get({plain: true})
+        const usersDisplay = {game_creator: {username: userObj.username}}
         res.status(200).render("game-details", {
+            usersDisplay,
             usersGames,
             logged_in: req.session.logged_in,
             userId: req.session.user_id
