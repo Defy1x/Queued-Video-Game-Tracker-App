@@ -25,8 +25,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// This makes a new instance of the user model
-// Make sure to attach the new user info to the req.body for this
+
 router.post("/", async (req, res) => {
     try {
         const newUserData = await User.create({
@@ -82,7 +81,6 @@ router.post("/logout", (req, res) => {
     }
 });
 
-// We had to use individual hooks here because User.update seems to be eagerly loaded, so it needs to know to only act on the specific user???
 router.put("/:id", async (req, res) => {
     try {
         const updatedUserData = await User.update(

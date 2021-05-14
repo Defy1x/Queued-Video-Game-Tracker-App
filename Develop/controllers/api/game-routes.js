@@ -65,7 +65,6 @@ router.post("/", async (req, res) => {
     }
 });
 
-// Will need to feed in the specific post id through the req.params, and the updated game through req.body
 router.put("/:id", async (req, res) => {
     try {
         const updatedGame = await Game.update({
@@ -80,8 +79,7 @@ router.put("/:id", async (req, res) => {
     }
 });
 
-// This is for deleting an existing post
-// Will need to feed in the specific id for that post
+
 router.delete("/:id", async (req, res) => {
     try {
         const deletedGame = await Game.destroy({
