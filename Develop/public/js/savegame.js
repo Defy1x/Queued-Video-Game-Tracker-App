@@ -44,7 +44,9 @@ const createGame = async (event) => {
     });
     if (response.ok) {
         console.log("Game Added!")
-        // document.location.reload();
+
+  setTimeout(function(){ document.location.reload(); }, 2000);
+
     } else {
         alert("Failed to add game to library.");
     }
