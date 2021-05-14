@@ -41,17 +41,17 @@
         {{#if logged_in}}
         <li class="nav-item" style="text-align: left;">
           <a href="/library/progress/1" class="nav-link text-white" aria-current="page">
-            <img style ="margin-right: 15px;" src="/img/bolt.png" width="10px;"></img>In Progress
+            <img style ="margin-right: 15px;" src="/img/bolt.png" width="10px;"></img>In Progress:<span id="in-progress-stats" style="padding-left: 67px;">0</span>
           </a>
         </li>
         <li style="text-align: left;">
           <a href="/library/completed/2" class="nav-link text-white">
-            <img style ="margin-right: 10px;" src="/img/trophy.png" width="15px;">Completed
+            <img style ="margin-right: 10px;" src="/img/trophy.png" width="15px;">Completed:<span id="completed-stats" style="padding-left: 69px;">0</span>
           </a>
         </li>
         <li style="text-align: left;">
           <a href="/library/notstarted/3" class="nav-link text-white">
-            <img style ="margin-right: 6px;" src="/img/diamond.png" width="15px;"> Not Started
+            <img style ="margin-right: 6px;" src="/img/diamond.png" width="15px;"> Not Started:<span id="not-started-stats" style="padding-left: 63px;">0</span>
           </a>
         </li>
       {{/if}}
@@ -86,6 +86,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/42a66a0b61.js"></script>
     <script src="/js/script.js"></script>
+    <script src="/js/stats.js"></script>
     <script src="/js/logout.js"></script>
   </body>
 </html>

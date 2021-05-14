@@ -61,7 +61,7 @@ Game.init(
           gameRating:{
             type: DataTypes.INTEGER,
             allowNull: true,
-            defaultValue: "N/A"
+            defaultValue: 0
           },
           gamePublisher:{
             type: DataTypes.TEXT,
@@ -76,7 +76,7 @@ Game.init(
           gameStatus:{
             type: DataTypes.INTEGER,
             allowNull: true,
-            defaultValue: "N/A"
+            defaultValue: 0
           },
           gameWebsite:{
             type: DataTypes.STRING,
