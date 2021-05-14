@@ -47,8 +47,20 @@ router.get("/stats", async (req, res) => {
             include:
                 { model: User, as: "game_creator" }
         });
-        // const usersGames = userSpecificGames.map((game) => game.get({ plain:true }));
-        // console.log(usersGames)
+
+        if (userSpecificGames.length < 3){
+          let statuses = userSpecificGames.map(obj => obj.gameStatus)
+          if (!statuses.includes(1)) {
+            userSpecificGames.unshift({ gameStatus: 1, count: 0})
+          }
+          if (!statuses.includes(2)) {
+              userSpecificGames.splice(1, 0, { gameStatus: 2, count: 0})
+          }
+          if (!statuses.includes(3)) {
+              userSpecificGames.push({ gameStatus: 3, count: 0})
+          }
+        }
+
         res.status(200).json({
           userSpecificGames,
           logged_in: req.session.logged_in,
