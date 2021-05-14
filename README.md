@@ -35,6 +35,9 @@ Please add your user name and password to the config file. You will need an API 
 ## Deployed Heroku Link
 http://www.queued-app.com
 
+## Youtube Demo
+https://www.youtube.com/watch?v=JZpMqNWWRlI
+
 ## Link to Github
 https://github.com/Defy1x/Queued-Video-Game-Tracker-App
 
